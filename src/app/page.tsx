@@ -2,15 +2,15 @@ import { IndustrialLanding } from "@/components/industrial-landing"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "JobDoneCrew - Local Deck Builders | Deck Repair & Fence Installation",
+  title: "Job Done Crew - Scranton Deck Builders | Deck Repair & Fence Installation",
   description:
-    "Top-rated local deck builders near you. Expert deck repair, installation, porch railing replacement, and fence repair services. Licensed & insured professionals. Get a free quote!",
+    "Top-rated Scranton deck builders near you. Expert deck repair, installation, porch railing replacement, and fence repair services. Licensed & insured professionals. Get a free quote!",
   keywords:
-    "deck builders, local deck repair, deck installation, porch railing replacement, fence repair near me, custom deck builder, composite decking, fence installation, residential deck contractor, wood deck repair",
+    "deck builders Scranton, Scranton deck repair, deck installation, porch railing replacement, fence repair Scranton, custom deck builder, composite decking, fence installation, residential deck contractor, wood deck repair",
   openGraph: {
-    title: "JobDoneCrew - Trusted Local Deck & Fence Services",
+    title: "Job Done Crew - Trusted Scranton Deck & Fence Services",
     description:
-      "Your local experts for deck building, repair, and fence installation. Quality craftsmanship guaranteed.",
+      "Your Scranton experts for deck building, repair, and fence installation. Quality craftsmanship guaranteed.",
     type: "website",
   },
   alternates: {
@@ -22,10 +22,10 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: "JobDoneCrew",
+    name: "Job Done Crew",
     image: "https://jobdonecrew.com/img/hero.png",
     description:
-      "Top-rated local deck builders near you. Expert deck repair, installation, porch railing replacement, and fence repair services in the Poconos and Scranton.",
+      "Top-rated Scranton deck builders near you. Expert deck repair, installation, porch railing replacement, and fence repair services in the Poconos and Scranton.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Stroudsburg",

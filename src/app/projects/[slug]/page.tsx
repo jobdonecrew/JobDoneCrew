@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: PageProps) {
   if (!project) return { title: "Project Not Found" }
 
   return {
-    title: `${project.title} | JobDoneCrew Projects`,
+    title: `${project.title} | Job Done Crew Projects`,
     description: project.description,
     openGraph: {
-      title: `${project.title} | JobDoneCrew Projects`,
+      title: `${project.title} | Job Done Crew Projects`,
       description: project.description,
       type: "article",
       url: `https://jobdonecrew.com/projects/${slug}`,
@@ -80,7 +80,7 @@ export default async function ProjectPage({ params }: PageProps) {
     serviceType: project.category,
     provider: {
       "@type": "HomeAndConstructionBusiness",
-      name: "JobDoneCrew",
+      name: "Job Done Crew",
       image: "https://jobdonecrew.com/jobdonecrew-logo.svg",
       telephone: "+19174050440",
       address: {

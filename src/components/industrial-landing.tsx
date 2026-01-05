@@ -205,10 +205,10 @@ export function IndustrialLanding() {
                   
                   <div className="space-y-4 mb-8">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight uppercase drop-shadow-xl">
-                      Trusted Local Deck Builders & <span className="text-amber-500">Repair Specialists</span>
+                      Trusted Scranton Deck Builders & <span className="text-amber-500">Repair Specialists</span>
                     </h2>
                     <p className="text-base md:text-lg text-zinc-200 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-md">
-                      Job Done Crew is your local expert for deck installation, repair, and fence services. From custom composite decks
+                      Job Done Crew is your Scranton expert for deck installation, repair, and fence services. From custom composite decks
                       to quick railing replacements, we build beautiful outdoor spaces that last.
                     </p>
                   </div>
@@ -613,7 +613,7 @@ export function IndustrialLanding() {
                 />
               </Link>
               <p className="text-zinc-500 font-medium text-sm leading-relaxed max-w-xs">
-                Job Done Crew delivers premium deck construction and outdoor renovation services. We combine traditional craftsmanship with modern materials to build spaces that last a lifetime.
+                Job Done Crew delivers premium deck construction and outdoor renovation services in Scranton and the Poconos. We combine traditional craftsmanship with modern materials to build spaces that last a lifetime.
               </p>
             </div>
 
