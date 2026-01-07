@@ -54,18 +54,18 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/img/hero.png",
+        url: "/logo.svg",
         width: 1200,
         height: 630,
-        alt: "Job Done Crew Industrial Deck Building",
+        alt: "Job Done Crew Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Job Done Crew - Premium Deck Building",
-    description: "Expert deck building and repair services in the Poconos and Scranton.",
-    images: ["/img/hero.png"],
+    title: "Job Done Crew - Premium Deck Building & Outdoor Renovations",
+    description: "Your trusted Scranton experts for custom decks, repairs, and fence installations in the Poconos and Scranton.",
+    images: ["/logo.svg"],
   },
   robots: {
     index: true,

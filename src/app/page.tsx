@@ -13,6 +13,12 @@ export const metadata: Metadata = {
       "Your Scranton experts for deck building, repair, and fence installation. Quality craftsmanship guaranteed.",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Job Done Crew - Trusted Scranton Deck & Fence Services",
+    description:
+      "Your Scranton experts for deck building, repair, and fence installation. Quality craftsmanship guaranteed.",
+  },
   alternates: {
     canonical: "/",
   },
@@ -23,7 +29,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     name: "Job Done Crew",
-    image: "https://jobdonecrew.com/img/hero.png",
+    image: "https://jobdonecrew.com/logo.svg",
     description:
       "Top-rated Scranton deck builders near you. Expert deck repair, installation, porch railing replacement, and fence repair services in the Poconos and Scranton.",
     address: {
