@@ -30,7 +30,7 @@ export function IndustrialLanding() {
         setShouldLoadMap(true)
         observer.disconnect()
       }
-    }, { rootMargin: "200px" })
+    }, { rootMargin: "1200px" })
     
     const mapContainer = document.getElementById("map-container")
     if (mapContainer) observer.observe(mapContainer)
@@ -188,7 +188,6 @@ export function IndustrialLanding() {
           fill
           className="object-cover"
           priority
-          quality={100}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-zinc-900/60" />
