@@ -16,12 +16,36 @@ import { cn } from "@/lib/utils"
 export function IndustrialLanding() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [mapUrl, setMapUrl] = useState("https://www.google.com/maps/d/u/1/embed?mid=1LtqpAqRVKfJqabz0z1HeThVcabMY_f4&ehbc=2E312F")
+  const [mapUrl, setMapUrl] = useState("")
+  const [shouldLoadMap, setShouldLoadMap] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
+    
+    // Lazy load map logic
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setShouldLoadMap(true)
+        observer.disconnect()
+      }
+    }, { rootMargin: "200px" })
+    
+    const mapContainer = document.getElementById("map-container")
+    if (mapContainer) observer.observe(mapContainer)
+
+    window.addEventListener("scroll", handleScroll)
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      observer.disconnect()
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!shouldLoadMap) return
+
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setMapUrl("https://www.google.com/maps/d/u/1/embed?mid=1LtqpAqRVKfJqabz0z1HeThVcabMY_f4&ehbc=2E312F&z=9")
@@ -30,17 +54,10 @@ export function IndustrialLanding() {
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
-    window.addEventListener("resize", handleResize)
-    
-    // Initial check
     handleResize()
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [shouldLoadMap])
 
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
@@ -98,8 +115,8 @@ export function IndustrialLanding() {
               </a>
             </nav>
             <div className="flex items-center gap-4">
-              <Button className="hidden lg:inline-flex bg-amber-600 hover:bg-amber-700 text-white font-bold px-8 py-6 text-base uppercase">
-                GET FREE ESTIMATE
+              <Button asChild className="hidden lg:inline-flex bg-amber-600 hover:bg-amber-700 text-white font-bold px-8 py-6 text-base uppercase">
+                <a href="#contact">GET FREE ESTIMATE</a>
               </Button>
               <button
                 className="lg:hidden text-white p-2"
@@ -151,10 +168,12 @@ export function IndustrialLanding() {
                 Contact
               </a>
               <Button 
+                asChild
                 className="bg-amber-600 hover:bg-amber-700 text-white font-bold w-full py-6 text-lg uppercase mt-4"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
-                GET FREE ESTIMATE
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  GET FREE ESTIMATE
+                </a>
               </Button>
             </nav>
           </div>
@@ -180,7 +199,6 @@ export function IndustrialLanding() {
             
             {/* Left Content */}
             <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-center pt-20 lg:pt-0">
-              <FadeIn direction="right">
                 <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
                   <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                     <div className="inline-block px-3 py-1.5 bg-amber-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-amber-900/20">
@@ -236,7 +254,6 @@ export function IndustrialLanding() {
                     </div>
                   </div>
                 </div>
-              </FadeIn>
             </div>
 
             {/* Right Form */}
@@ -281,6 +298,7 @@ export function IndustrialLanding() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   style={(project as any).imageRotation ? {
                     transform: `rotate(${(project as any).imageRotation}deg) scale(1.1)`
                   } : undefined}
@@ -478,19 +496,26 @@ export function IndustrialLanding() {
                   ))}
                 </div>
               </div>
-              <div className="relative h-[650px] border-4 border-zinc-700 bg-zinc-800 overflow-hidden">
-                <iframe 
-                  src={mapUrl}
-                  width="100%" 
-                  height="100%" 
-                  className="absolute left-0 md:-left-[15%] w-full md:w-[130%]"
-                  style={{ 
-                    border: 0,
-                    top: '-150px',
-                    height: 'calc(130% + 150px)',
-                  }}
-                  title="Service Zones Map"
-                ></iframe>
+              <div id="map-container" className="relative h-[650px] border-4 border-zinc-700 bg-zinc-800 overflow-hidden">
+                {mapUrl ? (
+                  <iframe 
+                    src={mapUrl}
+                    width="100%" 
+                    height="100%" 
+                    className="absolute left-0 md:-left-[15%] w-full md:w-[130%]"
+                    style={{ 
+                      border: 0,
+                      top: '-150px',
+                      height: 'calc(130% + 150px)',
+                    }}
+                    title="Service Zones Map"
+                    loading="lazy"
+                  ></iframe>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center bg-zinc-800 text-zinc-500">
+                    <p className="uppercase font-bold tracking-wider">Loading Map...</p>
+                  </div>
+                )}
                 {/* Invisible overlay to prevent interaction */}
                 <div className="absolute inset-0 z-10 cursor-default" />
                 <div className="absolute top-4 left-4 bg-amber-600 text-white px-4 py-2 font-black uppercase text-sm pointer-events-none z-20">
