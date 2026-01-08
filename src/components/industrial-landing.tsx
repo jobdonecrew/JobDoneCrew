@@ -183,7 +183,7 @@ export function IndustrialLanding() {
       {/* 1. Hero Section */}
       <section id="home" className="relative w-full min-h-screen h-auto flex items-center justify-center overflow-hidden pt-32 pb-24 lg:py-0">
         <Image
-          src="/img/hero.png"
+          src="/img/hero.webp"
           alt="Industrial Deck Construction"
           fill
           className="object-cover"
