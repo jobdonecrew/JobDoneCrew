@@ -101,7 +101,7 @@ export function IndustrialContactForm() {
           <Button 
             onClick={() => window.location.reload()}
             variant="outline"
-            className="border-zinc-700 text-white hover:bg-zinc-800 hover:text-white uppercase font-bold tracking-wider"
+            className="bg-zinc-900 border-zinc-700 text-white hover:bg-zinc-800 hover:text-white uppercase font-bold tracking-wider"
           >
             Send Another Request
           </Button>

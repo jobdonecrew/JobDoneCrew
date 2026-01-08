@@ -152,10 +152,10 @@ export default async function ProjectPage({ params }: PageProps) {
                                 Get Similar Quote
                             </Button>
                          </Link>
-                         <div className="flex items-center gap-2 text-zinc-400 font-bold px-4">
-                            <Shield className="h-5 w-5 text-amber-500" />
-                            <span className="text-sm uppercase">Lifetime Warranty</span>
-                         </div>
+                <div className="flex items-center gap-3 text-zinc-300">
+                  <Shield className="h-5 w-5 text-amber-500" />
+                  <span className="text-sm uppercase font-bold">Quality Guaranteed</span>
+                </div>
                     </div>
                 </div>
             </div>

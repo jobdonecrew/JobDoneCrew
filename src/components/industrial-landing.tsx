@@ -205,7 +205,7 @@ export function IndustrialLanding() {
                     </div>
                     <div className="flex items-center gap-2 text-zinc-300 bg-black/30 px-3 py-1.5 rounded-sm backdrop-blur-sm">
                       <Shield className="h-4 w-4 text-amber-500" />
-                      <span className="font-bold text-xs uppercase">5-Year Warranty</span>
+                      <span className="font-bold text-xs uppercase">Quality Guaranteed</span>
                     </div>
                   </div>
                   
@@ -362,8 +362,8 @@ export function IndustrialLanding() {
                 desc: "We are dedicated to providing superior craftsmanship and earning your trust through 5-star service on every project",
               },
               {
-                number: "5+",
-                title: "Years Warranty",
+                number: "5★",
+                title: "Expert Quality",
                 desc: "Industry-leading workmanship guarantee covering all structural elements and installations",
               },
               {
