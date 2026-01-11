@@ -12,6 +12,7 @@ import { IndustrialContactForm } from "./industrial/industrial-contact-form"
 import { IndustrialTestimonials } from "./industrial/industrial-testimonials"
 import { FadeIn } from "@/components/ui/fade-in"
 import { cn } from "@/lib/utils"
+import heroImage from "@/assets/hero.webp"
 
 export function IndustrialLanding() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -183,11 +184,12 @@ export function IndustrialLanding() {
       {/* 1. Hero Section */}
       <section id="home" className="relative w-full min-h-screen h-auto flex items-center justify-center overflow-hidden pt-32 pb-24 lg:py-0">
         <Image
-          src="/img/hero.webp"
+          src={heroImage}
           alt="Industrial Deck Construction"
           fill
           className="object-cover"
           priority
+          placeholder="blur"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-zinc-900/60" />
