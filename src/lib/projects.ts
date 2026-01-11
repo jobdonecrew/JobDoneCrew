@@ -80,7 +80,7 @@ export const projects = [
       "Integrated Handrails",
       "Reinforced Footings"
     ],
-    image: "/img/Project 5/main.png",
+    image: "/img/Project 5/main.webp",
     imageRotation: 1,
     slides: [
       "/img/Project 5/slide.jpg"

@@ -42,8 +42,11 @@ export const metadata: Metadata = {
   },
   generator: "v0.app",
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Job Done Crew - Premium Deck Building & Outdoor Renovations",

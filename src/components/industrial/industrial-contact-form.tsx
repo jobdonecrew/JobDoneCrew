@@ -121,14 +121,14 @@ export function IndustrialContactForm() {
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "name" || fieldValues.name
                 ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
-                : "top-1/2 -translate-y-1/2 text-zinc-500 font-medium"
+                : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
             Full Name
           </label>
           <User className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "name" ? "text-amber-500" : "text-zinc-600"
+            focusedField === "name" ? "text-amber-500" : "text-zinc-200"
           )} />
           <input
             id="name"
@@ -159,14 +159,14 @@ export function IndustrialContactForm() {
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "phone" || fieldValues.phone
                 ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
-                : "top-1/2 -translate-y-1/2 text-zinc-500 font-medium"
+                : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
             Phone Number
           </label>
           <Phone className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "phone" ? "text-amber-500" : "text-zinc-600"
+            focusedField === "phone" ? "text-amber-500" : "text-zinc-200"
           )} />
           <input
             id="phone"
@@ -197,14 +197,14 @@ export function IndustrialContactForm() {
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "email" || fieldValues.email
                 ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
-                : "top-1/2 -translate-y-1/2 text-zinc-500 font-medium"
+                : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
             Email Address
           </label>
           <Mail className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "email" ? "text-amber-500" : "text-zinc-600"
+            focusedField === "email" ? "text-amber-500" : "text-zinc-200"
           )} />
           <input
             id="email"
@@ -235,14 +235,14 @@ export function IndustrialContactForm() {
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "zip" || fieldValues.zip
                 ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
-                : "top-1/2 -translate-y-1/2 text-zinc-500 font-medium"
+                : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
             Zip Code
           </label>
           <MapPin className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "zip" ? "text-amber-500" : "text-zinc-600"
+            focusedField === "zip" ? "text-amber-500" : "text-zinc-200"
           )} />
           <input
             id="zip"
@@ -274,7 +274,7 @@ export function IndustrialContactForm() {
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "message" || fieldValues.message
                 ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
-                : "top-4 text-zinc-500 font-medium"
+                : "top-4 text-zinc-200 font-medium"
             )}
           >
             {focusedField === "message" || fieldValues.message
@@ -283,7 +283,7 @@ export function IndustrialContactForm() {
           </label>
           <MessageSquare className={cn(
             "absolute left-4 top-4 h-5 w-5 transition-colors duration-300",
-            focusedField === "message" ? "text-amber-500" : "text-zinc-600"
+            focusedField === "message" ? "text-amber-500" : "text-zinc-200"
           )} />
           <textarea
             id="message"
