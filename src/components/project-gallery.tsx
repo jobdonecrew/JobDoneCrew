@@ -38,6 +38,7 @@ export function ProjectGallery({ images, title, imgPosition = "center", imgRotat
                   src={image}
                   alt={`${title} - Slide ${index + 1}`}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   style={index === 0 && imgRotation !== 0 ? { 
                     transform: `rotate(${imgRotation}deg) scale(1.1)` 
                   } : undefined}

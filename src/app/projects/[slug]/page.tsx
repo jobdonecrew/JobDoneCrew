@@ -116,7 +116,7 @@ export default async function ProjectPage({ params }: PageProps) {
             </Link>
             
             <div className="grid lg:grid-cols-2 gap-12">
-                <div className="h-full min-h-[400px] border-4 border-zinc-800 rounded-lg overflow-hidden">
+                <div className="aspect-[4/3] w-full self-start border-4 border-zinc-800 rounded-lg overflow-hidden">
                                           <ProjectGallery 
                                              images={allImages} 
                                              title={project.title} 
