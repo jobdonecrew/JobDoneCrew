@@ -21,52 +21,67 @@ export function IndustrialLanding() {
   const [shouldLoadMap, setShouldLoadMap] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    
-    // Lazy load map logic
-    const observer = new IntersectionObserver((entries) => {
+    // 1. Scroll Logic using IntersectionObserver (Performance optimized)
+    const scrollObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsScrolled(!entry.isIntersecting)
+      },
+      { rootMargin: "20px 0px 0px 0px", threshold: 0 } // Trigger when top element scrolls out
+    )
+
+    const sentinel = document.getElementById("scroll-sentinel")
+    if (sentinel) scrollObserver.observe(sentinel)
+
+    // 2. Map Lazy Load Logic
+    const mapObserver = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         setShouldLoadMap(true)
-        observer.disconnect()
+        mapObserver.disconnect()
       }
-    }, { rootMargin: "1200px" })
+    }, { rootMargin: "200px" }) // Reduced margin to trigger closer to view
     
     const mapContainer = document.getElementById("map-container")
-    if (mapContainer) observer.observe(mapContainer)
+    if (mapContainer) mapObserver.observe(mapContainer)
 
-    window.addEventListener("scroll", handleScroll)
-    
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-      observer.disconnect()
+      scrollObserver.disconnect()
+      mapObserver.disconnect()
     }
   }, [])
 
   useEffect(() => {
     if (!shouldLoadMap) return
 
+    let timeoutId: NodeJS.Timeout
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setMapUrl("https://www.google.com/maps/d/u/1/embed?mid=1LtqpAqRVKfJqabz0z1HeThVcabMY_f4&ehbc=2E312F&z=9")
-      } else {
-        setMapUrl("https://www.google.com/maps/d/u/1/embed?mid=1LtqpAqRVKfJqabz0z1HeThVcabMY_f4&ehbc=2E312F")
-      }
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
+        if (window.innerWidth < 768) {
+          setMapUrl("https://www.google.com/maps/d/u/1/embed?mid=1LtqpAqRVKfJqabz0z1HeThVcabMY_f4&ehbc=2E312F&z=9")
+        } else {
+          setMapUrl("https://www.google.com/maps/d/u/1/embed?mid=1LtqpAqRVKfJqabz0z1HeThVcabMY_f4&ehbc=2E312F")
+        }
+      }, 150) // Debounce 150ms
     }
 
     handleResize()
     window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+      clearTimeout(timeoutId)
+    }
   }, [shouldLoadMap])
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white">
+    <div className="min-h-screen bg-zinc-900 text-white relative">
+      {/* Scroll Sentinel */}
+      <div id="scroll-sentinel" className="absolute top-0 h-4 w-full pointer-events-none opacity-0 z-[-1]" />
+
       {/* Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-zinc-900/90 backdrop-blur-md py-3 shadow-[0_1px_0_0_#27272a,0_25px_50px_-12px_rgba(0,0,0,0.25)]"
+            ? "bg-zinc-900/95 backdrop-blur-sm py-3 shadow-[0_1px_0_0_#27272a,0_25px_50px_-12px_rgba(0,0,0,0.25)]"
             : "bg-transparent py-6 bg-gradient-to-b from-black/60 to-transparent shadow-none"
         }`}
       >
@@ -131,7 +146,7 @@ export function IndustrialLanding() {
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-zinc-900/95 backdrop-blur-xl border-t border-zinc-800 p-6 flex flex-col gap-6 shadow-2xl h-screen">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-zinc-900/98 backdrop-blur-md border-t border-zinc-800 p-6 flex flex-col gap-6 shadow-2xl h-screen">
             <nav className="flex flex-col gap-6 items-center text-center">
               <a
                 href="#projects"
