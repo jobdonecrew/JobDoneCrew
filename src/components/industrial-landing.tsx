@@ -420,8 +420,10 @@ export function IndustrialLanding() {
             ].map((item, i) => (
               <div key={i} className="border-l-4 border-amber-600 pl-6 text-left">
                 <div className="text-7xl font-black text-amber-600 mb-4">{item.number}</div>
-                <h3 className="text-2xl font-black mb-3 uppercase min-h-[0] md:min-h-[4rem] lg:min-h-[4rem] xl:min-h-[4rem]">
-                  {item.title}
+                <h3 className="text-2xl font-black mb-3 uppercase leading-tight">
+                  {item.title.split(" ")[0]}
+                  <br />
+                  {item.title.split(" ").slice(1).join(" ")}
                 </h3>
                 <p className="text-zinc-400 font-medium leading-relaxed">{item.desc}</p>
               </div>
