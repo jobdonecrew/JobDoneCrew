@@ -111,7 +111,7 @@ export default async function ProjectPage({ params }: PageProps) {
       />
 
         <div className="container mx-auto px-6 py-12">
-            <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-amber-500 mb-8 transition-colors font-bold uppercase text-sm">
+            <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-amber-600 mb-8 transition-colors font-bold uppercase text-sm">
                 <ArrowLeft className="h-4 w-4" /> Back to Home
             </Link>
             
@@ -139,7 +139,7 @@ export default async function ProjectPage({ params }: PageProps) {
                         <ul className="space-y-3">
                             {project.details.map((detail, i) => (
                                 <li key={i} className="flex items-center gap-3 text-zinc-400 font-semibold">
-                                    <CheckCircle className="h-5 w-5 text-amber-500 flex-shrink-0" />
+                                    <CheckCircle className="h-5 w-5 text-amber-600 flex-shrink-0" />
                                     <span>{detail}</span>
                                 </li>
                             ))}
@@ -153,7 +153,7 @@ export default async function ProjectPage({ params }: PageProps) {
                             </Button>
                          </Link>
                 <div className="flex items-center gap-3 text-zinc-300">
-                  <Shield className="h-5 w-5 text-amber-500" />
+                  <Shield className="h-5 w-5 text-amber-600" />
                   <span className="text-sm uppercase font-bold">Quality Guaranteed</span>
                 </div>
                     </div>

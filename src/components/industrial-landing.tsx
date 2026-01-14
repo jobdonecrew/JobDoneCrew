@@ -197,7 +197,7 @@ export function IndustrialLanding() {
       </header>
 
       {/* 1. Hero Section */}
-      <section id="home" className="relative w-full min-h-screen h-auto flex items-center justify-center overflow-hidden pt-32 pb-24 lg:py-0">
+      <section id="home" className="relative w-full min-h-screen h-auto flex flex-col justify-center overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-24">
         <Image
           src={heroImage}
           alt="Industrial Deck Construction"
@@ -211,12 +211,12 @@ export function IndustrialLanding() {
         <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-zinc-900 via-zinc-900/50 to-transparent" />
         
         <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 xl:gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 xl:gap-16 items-start lg:items-center">
             
             {/* Left Content */}
-            <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-center pt-20 lg:pt-0">
+            <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-center pt-0">
                 <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
-                  <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
+                  <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                     <div className="inline-block px-3 py-1.5 bg-amber-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-amber-900/20">
                       Licensed Contractors
                     </div>
@@ -238,7 +238,7 @@ export function IndustrialLanding() {
                   </h1>
                   
                   <div className="space-y-4 mb-8">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight uppercase drop-shadow-xl">
+                    <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-white font-black leading-tight uppercase drop-shadow-xl">
                       Trusted Scranton Deck Builders & <span className="text-amber-600">Repair Specialists</span>
                     </h2>
                     <p className="text-base md:text-lg text-zinc-200 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-md">

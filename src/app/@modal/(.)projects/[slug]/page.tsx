@@ -34,7 +34,7 @@ export default async function ProjectModal({ params }: { params: Promise<{ slug:
                     </h2>
                 </div>
                 <div className="flex items-center gap-2 text-zinc-500 text-xs font-bold uppercase whitespace-nowrap">
-                    <Shield className="h-4 w-4 text-amber-500" />
+                    <Shield className="h-4 w-4 text-amber-600" />
                     Licensed & Insured
                 </div>
             </div>
@@ -52,7 +52,7 @@ export default async function ProjectModal({ params }: { params: Promise<{ slug:
                     <div className="space-y-3">
                         {project.details.map((detail, i) => (
                             <div key={i} className="flex items-start gap-3 text-zinc-400 text-sm font-semibold">
-                                <CheckCircle className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="h-4 w-4 text-amber-600 mt-0.5 flex-shrink-0" />
                                 <span>{detail}</span>
                             </div>
                         ))}
