@@ -397,24 +397,24 @@ export function IndustrialLanding() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
             {[
               {
+                number: "5+",
+                title: "Years Experience",
+                desc: "Serving the Scranton area with dedicated construction expertise.",
+              },
+              {
+                number: "250+",
+                title: "Projects Completed",
+                desc: "Successfully built decks and fences across the Poconos region.",
+              },
+              {
+                number: "5★",
+                title: "Customer Rating",
+                desc: "Consistently rated 5 stars for communication, reliability, and craftsmanship.",
+              },
+              {
                 number: "100%",
                 title: "Licensed & Insured",
-                desc: "Fully certified contractors with comprehensive liability coverage",
-              },
-              {
-                number: "5★",
-                title: "Quality Standard",
-                desc: "We are dedicated to providing superior craftsmanship and earning your trust through 5-star service on every project",
-              },
-              {
-                number: "5★",
-                title: "Expert Quality",
-                desc: "Industry-leading workmanship guarantee covering all structural elements and installations",
-              },
-              {
-                number: "100%",
-                title: "Honest Pricing",
-                desc: "Fully transparent estimates with zero hidden fees and detailed material breakdowns for every project",
+                desc: "Fully certified contractors with comprehensive liability coverage.",
               },
             ].map((item, i) => (
               <div key={i} className="text-center border-l-4 border-amber-600 pl-6 text-left">
