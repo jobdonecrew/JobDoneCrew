@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
@@ -81,14 +81,14 @@ export function IndustrialTestimonials() {
             <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/5">
               <div className="p-1 h-full">
                 <Card className="h-full bg-zinc-800 border-none shadow-xl hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-1 h-full bg-amber-600 group-hover:bg-amber-500 transition-colors" />
+                    <div className="absolute top-0 left-0 w-1 h-full bg-amber-600 group-hover:bg-amber-600 transition-colors" />
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
                   <CardContent className="flex flex-col justify-between p-6 h-full">
                     <div>
                         <div className="flex gap-0.5 mb-4">
                             {[...Array(review.rating)].map((_, i) => (
-                                <Star key={i} className="w-4 h-4 fill-amber-500 text-amber-500" />
+                                <Star key={i} className="w-4 h-4 fill-amber-600 text-amber-600" />
                             ))}
                         </div>
                         
@@ -100,7 +100,7 @@ export function IndustrialTestimonials() {
                     </div>
 
                     <div className="flex items-center gap-3 mt-auto pt-4 border-t border-zinc-700">
-                        <div className="h-10 w-10 rounded-full bg-zinc-700 overflow-hidden border-2 border-amber-600/30 group-hover:border-amber-500 transition-colors shrink-0 relative">
+                        <div className="h-10 w-10 rounded-full bg-zinc-700 overflow-hidden border-2 border-amber-600/30 group-hover:border-amber-600 transition-colors shrink-0 relative">
                             <Image
                                 src={review.avatar}
                                 alt={review.author}
@@ -109,7 +109,7 @@ export function IndustrialTestimonials() {
                             />
                         </div>
                         <div className="min-w-0">
-                            <div className="text-white font-black text-sm uppercase tracking-wide group-hover:text-amber-500 transition-colors truncate">{review.author}</div>
+                            <div className="text-white font-black text-sm uppercase tracking-wide group-hover:text-amber-600 transition-colors truncate">{review.author}</div>
                             <div className="text-zinc-500 font-bold text-[10px] uppercase tracking-wider truncate">{review.role}</div>
                         </div>
                     </div>
@@ -125,3 +125,4 @@ export function IndustrialTestimonials() {
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
@@ -101,31 +101,31 @@ export function IndustrialLanding() {
             <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
               <a
                 href="#projects"
-                className="text-sm font-bold text-zinc-400 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-sm font-bold text-zinc-400 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Projects
               </a>
               <a
                 href="#why-us"
-                className="text-sm font-bold text-zinc-400 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-sm font-bold text-zinc-400 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Why Us
               </a>
               <a
                 href="#services"
-                className="text-sm font-bold text-zinc-400 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-sm font-bold text-zinc-400 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Services
               </a>
               <a
                 href="#reviews"
-                className="text-sm font-bold text-zinc-400 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-sm font-bold text-zinc-400 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Reviews
               </a>
               <a
                 href="#contact"
-                className="text-sm font-bold text-zinc-400 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-sm font-bold text-zinc-400 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Contact
               </a>
@@ -151,35 +151,35 @@ export function IndustrialLanding() {
               <a
                 href="#projects"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-xl font-bold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-xl font-bold text-zinc-300 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Projects
               </a>
               <a
                 href="#why-us"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-xl font-bold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-xl font-bold text-zinc-300 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Why Us
               </a>
               <a
                 href="#services"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-xl font-bold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-xl font-bold text-zinc-300 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Services
               </a>
               <a
                 href="#reviews"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-xl font-bold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-xl font-bold text-zinc-300 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Reviews
               </a>
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-xl font-bold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-wider"
+                className="text-xl font-bold text-zinc-300 hover:text-amber-600 transition-colors uppercase tracking-wider"
               >
                 Contact
               </a>
@@ -221,7 +221,7 @@ export function IndustrialLanding() {
                       Licensed Contractors
                     </div>
                     <div className="flex items-center gap-2 text-zinc-300 bg-black/30 px-3 py-1.5 rounded-sm backdrop-blur-sm">
-                      <Shield className="h-4 w-4 text-amber-500" />
+                      <Shield className="h-4 w-4 text-amber-600" />
                       <span className="font-bold text-xs uppercase">Quality Guaranteed</span>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ export function IndustrialLanding() {
                   
                   <div className="space-y-4 mb-8">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight uppercase drop-shadow-xl">
-                      Trusted Scranton Deck Builders & <span className="text-amber-500">Repair Specialists</span>
+                      Trusted Scranton Deck Builders & <span className="text-amber-600">Repair Specialists</span>
                     </h2>
                     <p className="text-base md:text-lg text-zinc-200 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-md">
                       Job Done Crew is your Scranton expert for deck installation, repair, and fence services. From custom composite decks
@@ -261,11 +261,11 @@ export function IndustrialLanding() {
 
                   <div className="flex flex-wrap gap-x-6 gap-y-3 text-zinc-300 text-xs font-bold justify-center lg:justify-start">
                     <div className="flex items-center gap-2 bg-black/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                      <CheckCircle className="h-4 w-4 text-amber-500" />
+                      <CheckCircle className="h-4 w-4 text-amber-600" />
                       <span className="drop-shadow-md">TOP RATED LOCAL SERVICE</span>
                     </div>
                     <div className="flex items-center gap-2 bg-black/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                      <CheckCircle className="h-4 w-4 text-amber-500" />
+                      <CheckCircle className="h-4 w-4 text-amber-600" />
                       <span className="drop-shadow-md">FREE ON-SITE ESTIMATES</span>
                     </div>
                   </div>
@@ -276,7 +276,7 @@ export function IndustrialLanding() {
             <div className="lg:col-span-5 xl:col-span-5 relative w-full max-w-lg mx-auto lg:mx-0">
               <FadeIn delay={0.2} direction="up">
                 <div className="bg-zinc-950/90 backdrop-blur-sm border border-zinc-800 p-6 md:p-8 rounded-sm shadow-2xl relative">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 to-amber-500" />
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 to-amber-600" />
                   <div className="mb-6">
                     <h3 className="text-2xl font-black text-white uppercase mb-2">Get A Free Quote</h3>
                     <p className="text-zinc-400 text-sm font-medium">Fill out the form below and we'll contact you within 24 hours.</p>
@@ -325,7 +325,7 @@ export function IndustrialLanding() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent transition-opacity">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-amber-500 font-black text-xs mb-2 uppercase tracking-wider">
+                    <div className="text-amber-600 font-black text-xs mb-2 uppercase tracking-wider">
                       Project #{i + 1}
                     </div>
                     <h3
@@ -390,7 +390,7 @@ export function IndustrialLanding() {
               },
             ].map((item, i) => (
               <div key={i} className="text-center border-l-4 border-amber-600 pl-6 text-left">
-                <div className="text-7xl font-black text-amber-500 mb-4">{item.number}</div>
+                <div className="text-7xl font-black text-amber-600 mb-4">{item.number}</div>
                 <h3 className="text-2xl font-black mb-3 uppercase">{item.title}</h3>
                 <p className="text-zinc-400 font-medium leading-relaxed">{item.desc}</p>
               </div>
@@ -465,7 +465,7 @@ export function IndustrialLanding() {
                     <ul className="grid sm:grid-cols-2 gap-4">
                       {service.features.map((feature, j) => (
                         <li key={j} className="flex items-center gap-3 text-zinc-300 font-bold text-sm uppercase tracking-wide">
-                          <CheckCircle className="h-5 w-5 text-amber-500 shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-amber-600 shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -506,7 +506,7 @@ export function IndustrialLanding() {
                     "ALBRIGHTSVILLE", "BLAKESLEE", "BRODHEADSVILLE", "SAYLORSBURG"
                   ].map((area, i) => (
                     <div key={i} className="flex items-center gap-3 text-lg font-bold text-zinc-300">
-                      <MapPin className="h-5 w-5 text-amber-500" />
+                      <MapPin className="h-5 w-5 text-amber-600" />
                       <span>{area}</span>
                     </div>
                   ))}
@@ -581,7 +581,7 @@ export function IndustrialLanding() {
       </section>
 
       {/* 8. Contact Form */}
-      <section id="contact" className="py-24 bg-gradient-to-b from-zinc-800 to-zinc-900 border-t-4 border-amber-500">
+      <section id="contact" className="py-24 bg-gradient-to-b from-zinc-800 to-zinc-900 border-t-4 border-amber-600">
         <div className="container mx-auto px-6">
           <FadeIn direction="up">
             <div className="max-w-6xl mx-auto">
@@ -590,7 +590,7 @@ export function IndustrialLanding() {
                 <h2 className="text-5xl md:text-6xl font-black mb-6 uppercase leading-tight">
                   Ready to Build?
                   <br />
-                  <span className="text-amber-500">Let's Talk.</span>
+                  <span className="text-amber-600">Let's Talk.</span>
                 </h2>
                 <p className="text-xl text-zinc-300 mb-8 font-semibold leading-relaxed">
                   Get a detailed project estimate within 24 hours. Our experts will evaluate your property and provide
@@ -599,16 +599,16 @@ export function IndustrialLanding() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-center gap-4 text-zinc-300">
                     <div className="bg-zinc-700 p-3 rounded">
-                      <Phone className="h-6 w-6 text-amber-500" />
+                      <Phone className="h-6 w-6 text-amber-600" />
                     </div>
                     <div>
                        <div className="text-xs font-black text-zinc-500 uppercase">Call Now</div>
-                       <a href="tel:+19174050440" className="font-bold text-xl hover:text-amber-500 transition-colors">+1 917 405 0440</a>
+                       <a href="tel:+19174050440" className="font-bold text-xl hover:text-amber-600 transition-colors">+1 917 405 0440</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 text-zinc-300">
                     <div className="bg-zinc-700 p-3 rounded">
-                      <Clock className="h-6 w-6 text-amber-500" />
+                      <Clock className="h-6 w-6 text-amber-600" />
                     </div>
                     <div>
                        <div className="text-xs font-black text-zinc-500 uppercase">Hours</div>
@@ -617,17 +617,17 @@ export function IndustrialLanding() {
                   </div>
                   <div className="flex items-center gap-4 text-zinc-300">
                     <div className="bg-zinc-700 p-3 rounded">
-                      <Mail className="h-6 w-6 text-amber-500" />
+                      <Mail className="h-6 w-6 text-amber-600" />
                     </div>
                     <div>
                        <div className="text-xs font-black text-zinc-500 uppercase">Email Us</div>
-                       <a href="mailto:jobdonecrew@gmail.com" className="font-semibold text-lg hover:text-amber-500 transition-colors">jobdonecrew@gmail.com</a>
+                       <a href="mailto:jobdonecrew@gmail.com" className="font-semibold text-lg hover:text-amber-600 transition-colors">jobdonecrew@gmail.com</a>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-zinc-700 border-4 border-amber-500 p-8 shadow-2xl shadow-amber-900/10">
+              <div className="bg-zinc-700 border-4 border-amber-600 p-8 shadow-2xl shadow-amber-900/10">
                 <h3 className="text-2xl font-black mb-6 uppercase text-white">Get Your Free Quote</h3>
                 <IndustrialContactForm />
               </div>
@@ -670,7 +670,7 @@ export function IndustrialLanding() {
                   { name: "Commercial Projects", href: "#contact" },
                 ].map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-zinc-400 hover:text-amber-500 transition-colors font-medium text-sm block group">
+                    <a href={link.href} className="text-zinc-400 hover:text-amber-600 transition-colors font-medium text-sm block group">
                       <span className="group-hover:translate-x-1 transition-transform inline-block">{link.name}</span>
                     </a>
                   </li>
@@ -697,7 +697,7 @@ export function IndustrialLanding() {
                   </li>
                 ))}
               </ul>
-              <a href="#service-zones" className="inline-block mt-6 text-amber-500 text-xs font-black uppercase tracking-widest hover:text-white transition-colors border-b border-amber-500 hover:border-white pb-0.5">
+              <a href="#service-zones" className="inline-block mt-6 text-amber-600 text-xs font-black uppercase tracking-widest hover:text-white transition-colors border-b border-amber-600 hover:border-white pb-0.5">
                 View Full Service Map →
               </a>
             </div>
@@ -750,3 +750,4 @@ export function IndustrialLanding() {
     </div>
   )
 }
+

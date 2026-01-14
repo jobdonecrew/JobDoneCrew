@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import * as React from "react"
 import Image from "next/image"
@@ -54,8 +54,8 @@ export function ProjectGallery({ images, title, imgPosition = "center", imgRotat
         </CarouselContent>
         {images.length > 1 && (
           <>
-            <CarouselPrevious className="left-4 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-white/20 hover:bg-amber-500" />
-            <CarouselNext className="right-4 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-white/20 hover:bg-amber-500" />
+            <CarouselPrevious className="left-4 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-white/20 hover:bg-amber-600" />
+            <CarouselNext className="right-4 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 border-white/20 hover:bg-amber-600" />
           </>
         )}
       </Carousel>

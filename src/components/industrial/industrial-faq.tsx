@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Plus, Minus } from "lucide-react"
@@ -35,9 +35,9 @@ export function IndustrialFAQ() {
           value={`item-${i}`} 
           className="border border-zinc-800 bg-zinc-900/50 px-6 md:px-8 data-[state=open]:border-amber-600 data-[state=open]:bg-zinc-800/80 transition-all duration-300 group hover:border-zinc-700"
         >
-          <AccordionTrigger className="text-lg md:text-xl font-bold text-white py-6 md:py-8 hover:no-underline hover:text-amber-500 transition-colors uppercase text-left [&>svg]:hidden">
+          <AccordionTrigger className="text-lg md:text-xl font-bold text-white py-6 md:py-8 hover:no-underline hover:text-amber-600 transition-colors uppercase text-left [&>svg]:hidden">
             <span className="flex-1 pr-6">{faq.q}</span>
-            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center border-2 border-zinc-700 rounded-sm group-data-[state=open]:border-amber-600 group-data-[state=open]:bg-amber-600 group-hover:border-amber-500 transition-all">
+            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center border-2 border-zinc-700 rounded-sm group-data-[state=open]:border-amber-600 group-data-[state=open]:bg-amber-600 group-hover:border-amber-600 transition-all">
                 <Plus className="h-4 w-4 absolute transition-transform duration-300 group-data-[state=open]:rotate-90 group-data-[state=open]:opacity-0" />
                 <Minus className="h-4 w-4 absolute transition-transform duration-300 opacity-0 group-data-[state=open]:opacity-100 text-white" />
             </span>
@@ -50,3 +50,4 @@ export function IndustrialFAQ() {
     </Accordion>
   )
 }
+

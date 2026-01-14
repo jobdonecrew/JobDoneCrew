@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { Button } from "@/components/ui/button"
 import { User, Phone, Mail, MessageSquare, Send, MapPin, CheckCircle } from "lucide-react"
@@ -92,7 +92,7 @@ export function IndustrialContactForm() {
       return (
         <div className="text-center py-12 px-6 bg-zinc-900 border-2 border-amber-600 rounded-sm">
           <div className="inline-flex items-center justify-center p-4 bg-amber-600/20 rounded-full mb-6">
-            <CheckCircle className="h-12 w-12 text-amber-500" />
+            <CheckCircle className="h-12 w-12 text-amber-600" />
           </div>
           <h3 className="text-3xl font-black text-white uppercase mb-4">Request Received!</h3>
           <p className="text-zinc-400 text-lg mb-8 max-w-md mx-auto">
@@ -120,7 +120,7 @@ export function IndustrialContactForm() {
             className={cn(
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "name" || fieldValues.name
-                ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
+                ? "-top-6 text-xs text-amber-600 font-bold translate-y-0"
                 : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
@@ -128,7 +128,7 @@ export function IndustrialContactForm() {
           </label>
           <User className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "name" ? "text-amber-500" : "text-zinc-200"
+            focusedField === "name" ? "text-amber-600" : "text-zinc-200"
           )} />
           <input
             id="name"
@@ -158,7 +158,7 @@ export function IndustrialContactForm() {
             className={cn(
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "phone" || fieldValues.phone
-                ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
+                ? "-top-6 text-xs text-amber-600 font-bold translate-y-0"
                 : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
@@ -166,7 +166,7 @@ export function IndustrialContactForm() {
           </label>
           <Phone className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "phone" ? "text-amber-500" : "text-zinc-200"
+            focusedField === "phone" ? "text-amber-600" : "text-zinc-200"
           )} />
           <input
             id="phone"
@@ -196,7 +196,7 @@ export function IndustrialContactForm() {
             className={cn(
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "email" || fieldValues.email
-                ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
+                ? "-top-6 text-xs text-amber-600 font-bold translate-y-0"
                 : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
@@ -204,7 +204,7 @@ export function IndustrialContactForm() {
           </label>
           <Mail className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "email" ? "text-amber-500" : "text-zinc-200"
+            focusedField === "email" ? "text-amber-600" : "text-zinc-200"
           )} />
           <input
             id="email"
@@ -234,7 +234,7 @@ export function IndustrialContactForm() {
             className={cn(
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "zip" || fieldValues.zip
-                ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
+                ? "-top-6 text-xs text-amber-600 font-bold translate-y-0"
                 : "top-1/2 -translate-y-1/2 text-zinc-200 font-medium"
             )}
           >
@@ -242,7 +242,7 @@ export function IndustrialContactForm() {
           </label>
           <MapPin className={cn(
             "absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors duration-300",
-            focusedField === "zip" ? "text-amber-500" : "text-zinc-200"
+            focusedField === "zip" ? "text-amber-600" : "text-zinc-200"
           )} />
           <input
             id="zip"
@@ -273,7 +273,7 @@ export function IndustrialContactForm() {
             className={cn(
               "absolute left-12 transition-all duration-300 pointer-events-none z-10",
               focusedField === "message" || fieldValues.message
-                ? "-top-6 text-xs text-amber-500 font-bold translate-y-0"
+                ? "-top-6 text-xs text-amber-600 font-bold translate-y-0"
                 : "top-4 text-zinc-200 font-medium"
             )}
           >
@@ -283,7 +283,7 @@ export function IndustrialContactForm() {
           </label>
           <MessageSquare className={cn(
             "absolute left-4 top-4 h-5 w-5 transition-colors duration-300",
-            focusedField === "message" ? "text-amber-500" : "text-zinc-200"
+            focusedField === "message" ? "text-amber-600" : "text-zinc-200"
           )} />
           <textarea
             id="message"
@@ -316,3 +316,4 @@ export function IndustrialContactForm() {
     </form>
   )
 }
+
