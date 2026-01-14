@@ -358,7 +358,7 @@ export function IndustrialLanding() {
                     </div>
                     <h3
                       className={`text-white font-black uppercase mb-2 leading-tight ${
-                        i === 0 ? "text-3xl md:text-4xl" : "text-xl"
+                        i === 0 ? "text-xl md:text-4xl" : "text-xl"
                       }`}
                     >
                       {project.title}
