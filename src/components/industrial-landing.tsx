@@ -20,6 +20,21 @@ export function IndustrialLanding() {
   const [mapUrl, setMapUrl] = useState("")
   const [shouldLoadMap, setShouldLoadMap] = useState(false)
 
+  const [statusIndex, setStatusIndex] = useState(0)
+  
+  const LIVE_STATUSES = [
+    "High Demand: Spring schedule 85% full",
+    "Estimates provided within 24 hours",
+    "Fully Licensed & Insured PA Contractors"
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStatusIndex((prev) => (prev + 1) % LIVE_STATUSES.length)
+    }, 4000)
+    return () => clearInterval(interval)
+  }, [])
+
   useEffect(() => {
     // 1. Scroll Logic using IntersectionObserver (Performance optimized)
     const scrollObserver = new IntersectionObserver(
@@ -226,7 +241,7 @@ export function IndustrialLanding() {
                     </div>
                   </div>
                   
-                  <h1 className="mb-6 flex justify-center lg:justify-start">
+                  <h1 className="mb-6 hidden lg:flex justify-center lg:justify-start">
                     <Image
                       src="/jobdonecrew-logo.svg"
                       alt="JobDoneCrew - Built to Last. Built Right."
@@ -236,6 +251,19 @@ export function IndustrialLanding() {
                       priority
                     />
                   </h1>
+                  
+                  {/* Live Status Hook */}
+                  <div className="flex items-center gap-3 mb-8 lg:mt-12 justify-center lg:justify-start">
+                    <div className="relative flex h-3 w-3 shrink-0">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-600"></span>
+                    </div>
+                    <div className="h-6 overflow-hidden flex items-center">
+                      <p key={statusIndex} className="text-amber-500 font-bold text-xs md:text-sm uppercase tracking-widest animate-in slide-in-from-bottom-2 fade-in duration-500">
+                        {LIVE_STATUSES[statusIndex]}
+                      </p>
+                    </div>
+                  </div>
                   
                   <div className="space-y-4 mb-8">
                     <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-white font-black leading-tight uppercase drop-shadow-xl">
