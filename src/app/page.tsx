@@ -2,22 +2,22 @@ import { IndustrialLanding } from "@/components/industrial-landing"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Job Done Crew - Scranton Deck Builders | Deck Repair & Fence Installation",
+  title: "Deck Contractor Near Me | Deck Replacement & Repair - Job Done Crew",
   description:
-    "Top-rated Scranton deck builders near you. Expert deck repair, installation, porch railing replacement, and fence repair services. Licensed & insured professionals. Get a free quote!",
+    "Top-rated deck contractor serving Scranton & Pocono Mountains. Expert deck replacement, deck repair, porch repair, and custom deck building. Licensed decking contractor with 5+ years experience. Free quotes!",
   keywords:
-    "deck builders Scranton, Scranton deck repair, deck installation, porch railing replacement, fence repair Scranton, custom deck builder, composite decking, fence installation, residential deck contractor, wood deck repair",
+    "deck contractor, deck replacement, deck replacement contractor, deck repair, decking contractor, deck contractor near me, porch repair, deck repair contractor, deck repair services, deck builder tannersville pa, custom deck builder, composite decking, residential deck contractor, wood deck repair, Scranton deck builders",
   openGraph: {
-    title: "Job Done Crew - Trusted Scranton Deck & Fence Services",
+    title: "Professional Deck Contractor | Deck Replacement & Repair Services",
     description:
-      "Your Scranton experts for deck building, repair, and fence installation. Quality craftsmanship guaranteed.",
+      "Expert deck contractor specializing in deck replacement, deck repair, and porch repair. Licensed decking contractor serving Scranton & Pocono Mountains.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Job Done Crew - Trusted Scranton Deck & Fence Services",
+    title: "Professional Deck Contractor | Deck Replacement & Repair Services",
     description:
-      "Your Scranton experts for deck building, repair, and fence installation. Quality craftsmanship guaranteed.",
+      "Expert deck contractor specializing in deck replacement, deck repair, and porch repair. Licensed decking contractor serving Scranton & Pocono Mountains.",
   },
   alternates: {
     canonical: "/",
@@ -31,7 +31,7 @@ export default function HomePage() {
     name: "Job Done Crew",
     image: "https://jobdonecrew.com/logo.svg",
     description:
-      "Top-rated Scranton deck builders near you. Expert deck repair, installation, porch railing replacement, and fence repair services in the Poconos and Scranton.",
+      "Professional deck contractor offering deck replacement, deck repair, porch repair, and custom deck building services in Scranton, Pocono Mountains, and Monroe County PA.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Stroudsburg",
